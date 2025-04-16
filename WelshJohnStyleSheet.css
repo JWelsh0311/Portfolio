@@ -162,6 +162,6 @@ th {
     font-size: 30px;
 }
 
-.image-container:hover .hidden-message {
-  display: block;
+ .image-container:hover .hidden-message {
+    display: block;
 }
