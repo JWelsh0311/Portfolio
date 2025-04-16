@@ -200,3 +200,8 @@ body {
  .image-container:hover .hidden-message {
     display: block;
 }
+
+/* Prevent elements from overflowing the screen */
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
