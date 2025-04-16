@@ -162,6 +162,41 @@ th {
     font-size: 30px;
 }
 
+/* Mobile-first approach: Default styles for small screens (phones) */
+body {
+  font-size: 16px; /* Adjust base font size */
+  margin: 20px;
+}
+
+.navbar ul {
+  flex-direction: column; /* Stack the navbar items vertically on mobile */
+  align-items: center;
+}
+
+.navbar a {
+  padding: 10px 20px; /* Larger clickable area */
+}
+
+.image-container img {
+  width: 100%; /* Make images take full width on small screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* For larger screens, e.g., tablets and desktops */
+@media (min-width: 768px) {
+  .navbar ul {
+    flex-direction: row; /* Display navbar items horizontally on larger screens */
+  }
+
+  .image-container img {
+    width: 20%; /* Smaller image on larger screens */
+  }
+
+  body {
+    margin: 40px; /* Increase margins for larger screens */
+  }
+}
+
  .image-container:hover .hidden-message {
     display: block;
 }
