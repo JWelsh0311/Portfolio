@@ -1,0 +1,167 @@
+body {
+margin:25px 150px 25px 150px;
+    height: 100vh; /* Full height */
+    background: linear-gradient(to bottom, #000000, #000000, #AFAFAF); /* Gradient from black to silver */
+    background-attachment: fixed; /* Fixed background */
+    color: #fff; /* Light text for contrast */
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+	color: #808080;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+	text-align: left;
+}
+
+.center {
+   text-align: center;
+}
+
+.italic {
+   font-style: italic; /* Apply italic style */
+}
+
+.container {
+    display: grid;
+    place-items: center;  /* Centers the content both horizontally and vertically */
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 20%; /* Adjust to desired size */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.image-container p {
+    margin-top: 10px; /* Adjust the space between image and label */
+}
+
+.navbar {
+    background-color: #808080; /* Medium gray */
+    z-index: 10; /* Ensure it's above other elements */
+	top: 10px;
+	left: 150px; /* Align to the left */
+    right: 150px; /* Align to the right */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.navbar li {
+    margin-right: 1px; /* Space between menu items */
+	border-right: 3px solid black;
+}
+
+.navbar a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 30px; /* Add padding around links */
+    display: block; /* Make links fill the list item */
+	transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+	font-size: 25px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background-color: black; ; /* Change to your desired highlight color */
+    color: #fff; /* Change text color to white for contrast */
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#time-date-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#time-date-btn:hover {
+    background-color: red;
+}
+
+#output {
+    font-size: 18px;
+    color: white;
+}
+
+.custom-line {
+    border: none;
+    height: 20px; /* Adjust thickness here */
+    background-color: #808080; /* Medium gray */
+    margin: 20px 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 15px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+ table {
+    border-spacing: 0 5px; /* 0 for horizontal spacing, 5px for vertical spacing */
+    border-collapse: collapse; /* Ensures borders between cells are combined */
+	font-size: 30px; 
+}
+        
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: center;
+	color: red;
+}
+
+th {
+    background-color: #808080; /* Light gray background for the header */
+	color: black;
+}
+
+.hidden-message {
+    bottom: 50px;
+    left: 10px;
+    color: red;
+    padding: 0px;
+    display: none;
+    font-size: 30px;
+}
+
+ .image-container:hover .hidden-message {
+    display: block;
+}
