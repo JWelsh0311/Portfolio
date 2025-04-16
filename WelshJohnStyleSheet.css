@@ -162,46 +162,98 @@ th {
     font-size: 30px;
 }
 
-/* Mobile-first approach: Default styles for small screens (phones) */
+/* Mobile-first approach (For small screens) */
 body {
-  font-size: 16px; /* Adjust base font size */
-  margin: 20px;
+  font-size: 16px;
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%; /* Ensure the navbar spans the full width */
+  background-color: #808080;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .navbar ul {
-  flex-direction: column; /* Stack the navbar items vertically on mobile */
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
   align-items: center;
 }
 
+.navbar li {
+  margin-bottom: 10px;
+}
+
 .navbar a {
-  padding: 10px 20px; /* Larger clickable area */
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.image-container {
+  width: 100%; /* Ensure images use full width */
+  text-align: center;
 }
 
 .image-container img {
-  width: 100%; /* Make images take full width on small screens */
+  width: 100%; /* Full width of container */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* For larger screens, e.g., tablets and desktops */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px; /* Adjust padding to avoid navbar overlap */
+}
+
+h1, h2, h3 {
+  font-size: 2rem; /* Scalable font size for mobile */
+}
+
 @media (min-width: 768px) {
   .navbar ul {
-    flex-direction: row; /* Display navbar items horizontally on larger screens */
+    flex-direction: row; /* For larger screens, display items horizontally */
+    justify-content: space-around;
+  }
+
+  .navbar a {
+    font-size: 20px; /* Increase font size for larger screens */
+  }
+
+  .container {
+    padding-top: 80px; /* Increase top padding to compensate for fixed navbar */
   }
 
   .image-container img {
-    width: 20%; /* Smaller image on larger screens */
+    width: 50%; /* Reduce image size on larger screens */
   }
 
-  body {
-    margin: 40px; /* Increase margins for larger screens */
+  h1, h2, h3 {
+    font-size: 3rem; /* Increase font size on larger screens */
   }
 }
 
- .image-container:hover .hidden-message {
-    display: block;
-}
+/* Add the previous styles here (you should already have them from before) */
 
-/* Prevent elements from overflowing the screen */
+/* Make sure to prevent horizontal overflow */
 body, html {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
