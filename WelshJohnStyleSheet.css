@@ -1,0 +1,220 @@
+body {
+ margin: 25px 10%;
+    height: 100vh; /* Full height */
+    background-color: #0f1b2b; /* Deep blue/tech background */
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+	
+	/* Subtle grid pattern using linear gradients */
+  background-image:
+    linear-gradient(0deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+}
+
+h1 {
+    font-size: 80px;
+	color: #808080;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+	text-align: left;
+}
+
+.center {
+   text-align: center;
+}
+
+.italic {
+   font-style: italic; /* Apply italic style */
+}
+
+.container {
+    display: grid;
+    place-items: center;  /* Centers the content both horizontally and vertically */
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 20%; /* Adjust to desired size */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.image-container p {
+    margin-top: 10px; /* Adjust the space between image and label */
+}
+
+.navbar {
+    background-color: #8B0000; /* Dark Red */
+    z-index: 10; /* Ensure it's above other elements */
+    top: 10px;
+    left: 150px; /* Align to the left */
+    right: 150px; /* Align to the right */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 5px 0; /* Reduced vertical padding to make it thinner */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.navbar li {
+    margin-right: 1px; /* Space between menu items */
+    border-right: 3px solid black;
+}
+
+.navbar a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 15px; /* Adjust padding for thinner navbar */
+    display: block; /* Make links fill the list item */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-size: 18px; /* Smaller font size for thinner navbar */
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background-color: black; /* Change to your desired highlight color */
+    color: #fff; /* Change text color to white for contrast */
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#time-date-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#time-date-btn:hover {
+    background-color: red;
+}
+
+#output {
+    font-size: 18px;
+    color: white;
+}
+
+.custom-line {
+    border: none;
+    height: 20px; /* Adjust thickness here */
+    background-color: #808080; /* Medium gray */
+    margin: 20px 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 15px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+ .table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  min-width: 600px; /* Forces scrolling on smaller devices */
+  border-spacing: 0 5px;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: center;
+  color: red;
+  background-color: #0f1b2b; /* Optional: ensures background is consistent */
+}
+
+th {
+  background-color: #808080;
+  color: black;
+}
+
+.hidden-message {
+    bottom: 50px;
+    left: 10px;
+    color: red;
+    padding: 0px;
+    display: none;
+    font-size: 30px;
+}
+
+ .image-container:hover .hidden-message {
+    display: block;
+}
+
+.bio-paragraph {
+  text-align: center;
+  font-size: 1.25rem; /* Base size (~20px) */
+  padding: 0 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Adjust for smaller devices */
+@media (max-width: 768px) {
+  .bio-paragraph {
+    font-size: 1.1rem; /* Slightly smaller (~18px) */
+  }
+}
+
+@media (max-width: 480px) {
+  .bio-paragraph {
+    font-size: 1rem; /* Smaller screens (~16px) */
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 18px;
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
